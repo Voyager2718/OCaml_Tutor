@@ -1,5 +1,4 @@
 (*
-<<<<<<< HEAD
 -open **;; 打开**模块
 -#use "**";; 打开**文件
 -ocamlc -c ** 在cmd/terminal里面，将**文件编译
