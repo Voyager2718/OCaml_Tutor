@@ -44,7 +44,17 @@ let c2 = { c with r = 0.};;
 Sys.argv;;
 (*保存运行参数的string数组*)
 
-(*Array*)
+(*--------Big_int--------*)
+#load "nums.cma";;
+open Big_int;;
+
+let bi = Big_int.big_int_of_int 100;;
+(*创建一个big_int*)
+
+Big_int.string_of_big_int bi;;
+(*返回bi的string表达（要显示big_int，必须用此方法）*)
+
+(*--------Array--------*)
 open Array;;
 
 let arr = [||];;
@@ -65,7 +75,7 @@ Array.make 10 0;;
 Array.create 10 0;;
 (*创建一个10个元素的数组，并初始化为0*)
 
-(*List*)
+(*--------List--------*)
 open List;;
 
 let lst = [];;
@@ -94,8 +104,35 @@ List.concat lst2;;
 List.flatten lst2;;
 (*返回[1;2;3;4;5]*)
 
-(*Stack*)
+(*--------String--------*)
+let str = "P.R.China";;
+(*创建一个string*)
 
+String.length str;;
+(*返回str的长度*)
+
+String.get str 1;;
+(*返回str第2个元素*)
+
+String.make 5 'a';;
+(*返回一个长度为5，全部是a的string*)
+
+String.sub str 1 3;;
+(*返回str从第二位长度3的字符串（即".R."）*)
+
+String.index str 'a';;
+(*返回str中'a'的位置*)
+
+String.uppercase str;;
+(*返回str的大写（lower同理）*)
+
+String.compare str "China";;
+(*相同则返回0，不同返回-1*)
+
+String.capitalize str;;
+(*返回首字母大写的str*)
+
+(*--------Stack--------*)
 let stk = Stack.create;;
 (*创建一个名为stk的stack*)
 
