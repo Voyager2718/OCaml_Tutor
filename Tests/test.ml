@@ -167,9 +167,9 @@ Stack.iter f s;;
 (*第一个参数是一个函数，函数的参数是一个任何类型的数，返回值是unit 。第二个参数是一个堆。
 iter的作用是：按顺序将堆的每一个元素作为f的参数执行f。*)
 
-(*
-http://caml.inria.fr/pub/docs/oreilly-book/html.bak/book-ora016.html
-Constructors can have arguments. The keyword of indicates the type of the constructor's arguments. This supports the gathering into a single type of objects of different types, each one being introduced with a particular constructor.
+(*--------文件--------*)
+let fopen = open_in "***";;
+(*创建一个名为fopen的文件句柄*)
 
-Here is a classic example of defining a datatype to represent the cards in a game, here Tarot8. The types suit and card are defined in the following way:
-*)
+char_of_int ( input_byte fopen );;
+(*读取下一个字符（不能回退）*)
