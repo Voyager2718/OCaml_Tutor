@@ -2,7 +2,7 @@
 -open **;; 打开**模块
 -#use "**";; 打开**文件
 -ocamlc -c ** 在cmd/terminal里面，将**文件编译
--打开一个自定义模块的时候，需要在cmd/terminal使用以下语法：ocaml ***.cmo（意思是：使用ocaml，并同时引入***.cmo (定义模块的文件名必须为小写，但是open的时候必须首字母大写)
+-打开一个自定义模块的时候，需要在cmd/terminal使用以下语法：ocaml ***.cmo（意思是：使用ocaml，并同时引入***.cmo） (定义模块的文件名必须为小写，但是open的时候必须首字母大写)
 -OCaml变量首字母不能大写
  首字母大写的是只能是某type类型的元素
 -let main () = .. ;; let _ = main();; 通过let _ = main()定义main是主函数。
