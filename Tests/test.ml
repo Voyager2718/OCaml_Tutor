@@ -164,8 +164,10 @@ Stack.length s;;
 (*返回s的长度*)
 
 Stack.iter f s;;
-(*第一个参数是一个函数，函数的参数是一个任何类型的数，返回值是unit 。第二个参数是一个堆。
-iter的作用是：按顺序将堆的每一个元素作为f的参数执行f。*)
+(*
+第一个参数是一个函数，函数的参数是一个任何类型的数，返回值是unit 。第二个参数是一个堆。
+iter的作用是：按顺序将堆的每一个元素作为f的参数执行f。
+*)
 
 (*--------文件--------*)
 let fopen = open_in "***";;
@@ -173,3 +175,16 @@ let fopen = open_in "***";;
 
 char_of_int ( input_byte fopen );;
 (*读取下一个字符（不能回退）*)
+
+End_of_file;;
+(*一个Exception*)
+
+(*--------常用--------*)
+let read fopen =
+	try
+		while true do
+			print_char(char_of_int(input_byte fopen));
+		done
+	with
+	|End_of_file->close_in fopen;;
+(*读取fopen中的每一个字符，并输出。fopen为输入对象*)
